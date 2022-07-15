@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Module08" />
+        <module name="Module09" />
+        <module name="Module06" />
+        <module name="Module07" />
+        <module name="Module04" />
+        <module name="Module05" />
+        <module name="Module02" />
+        <module name="Module03" />
+        <module name="Module01" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ear" target="1.5" />
+      <module name="ejbs" target="1.5" />
+      <module name="logging" target="1.5" />
+      <module name="ModuleTest" target="1.5" />
+      <module name="primary-source" target="1.5" />
+      <module name="projects" target="1.5" />
+      <module name="servlet" target="1.5" />
+      <module name="servlets" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

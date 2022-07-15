@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试获取请求参数</title>
+</head>
+<body>
+<h1>测试获取请求参数页面</h1>
+<a th:href="@{/testParam/testServletAPI(username='admin',password='123456')}">通过servletAPI获取</a><br>
+<br>
+<form th:action="@{/testParam/test}" method="get">
+    <fieldset>
+        <legend>默认映射</legend>
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        爱好：<input type="checkbox" name="hobby" value="a">a
+        <input type="checkbox" name="hobby" value="b">b
+        <input type="checkbox" name="hobby" value="c">c<br>
+        <input type="submit" value="通过在控制器方法中设置与参数同名的形参直接获取">
+    </fieldset>
+</form>
+<br>
+<form th:action="@{/testParam/testRequestParam}" method="post">
+    <fieldset>
+        <legend>@RequestParam</legend>
+        用户名：<input type="text" name="user_name"><br>
+        密码：<input type="password" name="pass_word"><br>
+        爱好：<input type="checkbox" name="hobbies" value="a">a
+        <input type="checkbox" name="hobbies" value="b">b
+        <input type="checkbox" name="hobbies" value="c">c<br>
+        <input type="submit" value="通过@RequestParam来处理请求参数与控制器方法参数的映射关系">
+    </fieldset>
+</form>
+<br>
+<form th:action="@{/testParam/testRequestHeader}" method="post">
+    <fieldset>
+        <legend>@RequestHeader</legend>
+        <input type="submit" value="通过@RequestHeader来处理请求头部与控制器方法参数的映射关系">
+    </fieldset>
+</form>
+<br>
+<form th:action="@{/testParam/testCookieValue}" method="post">
+    <fieldset>
+        <legend>@CookieValue</legend>
+        <input type="submit" value="通过@CookieValue来处理Cookie与控制器方法参数的映射关系">
+    </fieldset>
+</form>
+<br>
+<form th:action="@{/testParam/testBean}" method="post">
+    <fieldset>
+        <legend>通过实体类（POJO）来获取请求参数</legend>
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        性别：<input type="radio" name="gender" value="男">男<input type="radio" name="gender" value="女">女<br>
+        年龄：<input type="text" name="age"><br>
+        邮箱：<input type="text" name="email"><br>
+        <input type="submit" value="通过实体类（POJO）来获取请求参数">
+    </fieldset>
+</form>
+</body>
+</html>

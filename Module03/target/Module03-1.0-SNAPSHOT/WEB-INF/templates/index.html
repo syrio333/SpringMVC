@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>这是首页</h1>
+<h2>向Request域对象中共享数据</h2>
+<a th:href="@{/testRequestByServletAPI}">使用servletAPI向request域对象共享数据</a><br>
+<a th:href="@{/testRequestByModelAndView}">使用ModelAndView向request域对象共享数据</a><br>
+<a th:href="@{/testRequestByModel}">使用Model向request域对象共享数据</a><br>
+<a th:href="@{/testRequestByMap}">使用Map向request域对象共享数据</a><br>
+<a th:href="@{/testRequestByModelMap}">使用ModelMap向request域对象共享数据</a><br>
+<br>
+<h2>向Session域对象中共享数据</h2>
+<a th:href="@{/testSessionByServletAPI}">使用ServletAPI向session域对象共享数据</a><br>
+<br>
+<h2>向Application域对象中共享数据</h2>
+<a th:href="@{/testApplication}">使用ServletAPI向Application域对象共享数据</a><br>
+<br>
+<h2>创建InternalResourceView转发视图</h2>
+<a th:href="@{/testInternalResourceView}">测试以 forward: 开头的视图名称创建InternalResourceView转发视图</a><br>
+<br>
+<h2>创建RedirectView重定向视图</h2>
+<a th:href="@{/testRedirectView}">测试以 redirect: 开头的视图名称创建RedirectView重定向视图</a><br>
+</body>
+</html>

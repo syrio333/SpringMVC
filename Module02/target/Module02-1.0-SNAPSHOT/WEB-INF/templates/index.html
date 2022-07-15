@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>index页面</h1>
+<a th:href="@{/requestMapping/target}">访问目标页面target.html</a><br>
+<a th:href="@{/requestMapping/test}">通过test访问success.html</a><br>
+<a th:href="@{/requestMapping/test1}">通过test1访问success.html</a><br>
+<a th:href="@{/requestMapping/test1}">通过get方式访问success.html</a><br>
+<form th:action="@{/requestMapping/test1}" method="post">
+    <input type="submit" value="通过post方式访问success.html">
+</form><br>
+<a th:href="@{/requestMapping/getMappingTest}">测试getMapping</a><br>
+<form th:action="@{/requestMapping/putMappingTest}" method="put">
+    <input type="submit" value="测试form表单能否发送put或delete请求">
+</form><br>
+<a th:href="@{/requestMapping/testParams(username='admin',password='123456')}">测试requestMapping的params和headers属性</a><br>
+<br>
+<br>
+<h2>测试requestMapping支持ant风格的路径</h2>
+<a th:href="@{/requestMapping/a1b/testAnt}">使用?</a><br>
+<a th:href="@{/requestMapping/a123456b/testAnt}">使用*</a><br>
+<a th:href="@{/requestMapping/a/b/c/d/e/f/testAnt}">使用**</a><br>
+<a th:href="@{/requestMapping/a/123/b/testAnt}">错误使用**</a><br>
+<br>
+<br>
+<h2>测试requestMapping支持占位符（restful）</h2>
+<a th:href="@{/requestMapping/testPlaceHolder/admin/123456}">参数：账号密码</a>
+</body>
+</html>

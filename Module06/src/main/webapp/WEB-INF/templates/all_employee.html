@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有员工</title>
+    <style>
+        table, th, td {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<a th:href="@{/}">返回首页</a><br>
+<br>
+<table id="dataTable" style="text-align: center">
+    <tr>
+        <th colspan="5">员工列表</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+        <th>EMAIL</th>
+        <th>OPTION(<a th:href="@{employee_add}">添加员工</a>)</th>
+    </tr>
+    <tr th:each="employee:${employees}">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.gender}"></td>
+        <td th:text="${employee.email}"></td>
+        <td>
+            <a th:href="@{'/employee/'+${employee.id}}">Update</a>
+            <a @click="deleteEmployeeById" th:href="@{'/employee/'+${employee.id}}">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<form id="deleteEmployeeByIdForm" method="POST">
+    <input type="hidden" name="_method" value="DELETE"/>
+</form>
+
+<!--dispatcherServlet无法访问静态资源，需要配置默认的defaultServlet-->
+<script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+<script type="text/javascript">
+    var vue = new Vue({
+        el: "#dataTable",
+        methods: {
+            deleteEmployeeById: function (event) {
+                /*根据id获取表单元素*/
+                var deleteEmployeeByIdForm = document.getElementById("deleteEmployeeByIdForm");
+                /*将链接地址赋值给表单的action*/
+                deleteEmployeeByIdForm.action = event.target.href;
+                /*表单提交*/
+                deleteEmployeeByIdForm.submit();
+                /*阻止默认行为（链接跳转）*/
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+</body>
+</html>

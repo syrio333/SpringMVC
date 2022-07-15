@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>成功</title>
+</head>
+<body>
+<h1>成功页面</h1>
+testRequestBy:*****<a th:text="${testRequestBy}"/>*****<br>
+testSessionBy:*****<a th:text="${session.testSessionBy}"/>*****<br>
+testApplicationBy:*****<a th:text="${application.testApplication}"/>*****<br>
+<a th:href="@{/}">返回首页</a><br>
+</body>
+</html>

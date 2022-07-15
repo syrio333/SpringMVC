@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/ModuleTest/ear" />
+    <file type="web" url="file://$PROJECT_DIR$/Module01" />
+    <file type="web" url="file://$PROJECT_DIR$/Module02" />
+    <file type="web" url="file://$PROJECT_DIR$/Module03" />
+    <file type="web" url="file://$PROJECT_DIR$/Module04" />
+    <file type="web" url="file://$PROJECT_DIR$/Module05" />
+    <file type="web" url="file://$PROJECT_DIR$/Module06" />
+    <file type="web" url="file://$PROJECT_DIR$/Module07" />
+    <file type="web" url="file://$PROJECT_DIR$/Module08" />
+    <file type="web" url="file://$PROJECT_DIR$/Module09" />
+    <file type="web" url="file://$PROJECT_DIR$/ModuleTest/servlets/servlet" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Module01/pom.xml" />
+        <option value="$PROJECT_DIR$/Module02/pom.xml" />
+        <option value="$PROJECT_DIR$/Module03/pom.xml" />
+        <option value="$PROJECT_DIR$/Module04/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/pom.xml" />
+        <option value="$PROJECT_DIR$/Module05/pom.xml" />
+        <option value="$PROJECT_DIR$/Module06/pom.xml" />
+        <option value="$PROJECT_DIR$/Module07/pom.xml" />
+        <option value="$PROJECT_DIR$/Module08/pom.xml" />
+        <option value="$PROJECT_DIR$/Module09/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ModuleTest/ear/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/ejbs/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/primary-source/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/projects/logging/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/projects/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/servlets/pom.xml" />
+        <option value="$PROJECT_DIR$/ModuleTest/servlets/servlet/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
